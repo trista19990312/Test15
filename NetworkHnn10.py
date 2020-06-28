@@ -12,7 +12,7 @@ class Network(object):
         self.layers = layers
 
         # 0:
-        self.sess = tf.InteractiveSession()
+        self.sess = tf.compat.v1.InteractiveSession()
 
         self.x = tf.placeholder(tf.float32, [16], name='x')
         self.y = tf.placeholder(tf.float32, [1])
