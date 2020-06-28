@@ -3,7 +3,9 @@ import gzip
 
 import numpy as np
 
-import tensorflow as tf
+
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 
 
 # Main class used to construct and train networks #
@@ -12,7 +14,7 @@ class Network(object):
         self.layers = layers
 
         # 0:
-        self.sess = tf.compat.v1.InteractiveSession()
+        self.sess = tf.InteractiveSession()
 
         self.x = tf.placeholder(tf.float32, [16], name='x')
         self.y = tf.placeholder(tf.float32, [1])
@@ -74,7 +76,6 @@ class Network(object):
 
                     # 保存MLP模型
                     saver.save(self.sess, './model/Hnn.ckpt')
-
 
     def evaluate(self, data_set):
         cost_list = []
