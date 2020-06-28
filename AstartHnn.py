@@ -121,8 +121,8 @@ class State(object):
         random_method = np.random.RandomState(int(time.time()))
         random_method.shuffle(self.nodes_1d[0:self.NN-1])
 
-        self.nodes_1d = np.array([0,1,2,3,4,6,7,11,8,5,13,10,12,9,14,15], dtype='int16')
-        #self.nodes_1d = np.array([1,5,3,7,0, 6,2,11,4,13,9,14,8,12,10,15], dtype='int16')
+        #self.nodes_1d = np.array([0,1,2,3,4,6,7,11,8,5,13,10,12,9,14,15], dtype='int16')
+        self.nodes_1d = np.array([1,5,3,7,0, 6,2,11,4,13,9,14,8,12,10,15], dtype='int16')
         #self.nodes_1d = np.array([0,3,8,6,14,5,9,7,13,4,11,10,12,2,1,15], dtype='int16')
         #self.nodes_1d = np.array([9,4,0,6,2,8,3,13,5,1,11,10,12,7,14,15], dtype='int16')
         #self.nodes_1d = np.array([4,3,7,6,1,14,5,10,12,11,9,2,8,0,13,15], dtype='int16')
