@@ -91,8 +91,7 @@ def states_save(filename, states_list):
     pk.dump(states_list, f_out, -1)
     f_out.close()
 
-    import winsound
-    winsound.Beep(300, 1500)     # 其中300表示声音大小，1500表示发生时长，1000为1秒
+
 
 
 def states_save_auto(states_list):
@@ -128,7 +127,7 @@ class State(object):
         #self.nodes_1d = np.array([9,4,0,6,2,8,3,13,5,1,11,10,12,7,14,15], dtype='int16')
         #self.nodes_1d = np.array([4,3,7,6,1,14,5,10,12,11,9,2,8,0,13,15], dtype='int16')
         #self.nodes_1d = np.array([6,12,4,7,10,3,1,2,5,9,14,13,0,8,11,15], dtype='int16')
-        self.nodes_1d = np.array([0,1,2,3,4,5,6,7,8,9,10,11,12,13,15,14], dtype='int16')
+        self.nodes_1d = np.array([0,1,2,3,4,5,6,7,8,9,10,11,12,15,13,14], dtype='int16')
 
         while self.is_no_solution():
             random_method = np.random.RandomState(int(time.time()))
