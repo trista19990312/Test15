@@ -264,8 +264,10 @@ if __name__ == '__main__':
                     data = (t.nodes.flatten())
                     path_list.append(data)
                     print(t.nodes)
+                    x=0
+                    x+=1
                 num=len(t.nodes)-1
-                print('steps:',num)
+                print('steps:',x)
                 #states_save_auto(path_list)
 
                 break
