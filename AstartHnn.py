@@ -266,8 +266,8 @@ if __name__ == '__main__':
                     print(t.nodes)
                     x=0
                     x+=1
-                num=len(t.nodes)-1
-                print('steps:',x)
+                num=len(path_list)-1
+                print('steps:',num)
                 #states_save_auto(path_list)
 
                 break
